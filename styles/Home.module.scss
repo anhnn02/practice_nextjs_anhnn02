@@ -1,0 +1,7 @@
+.demo {
+  @apply tw-bg-red-500;
+  
+  &-item{
+    @apply tw-text-white
+  }
+}
