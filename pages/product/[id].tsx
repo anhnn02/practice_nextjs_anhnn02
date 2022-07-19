@@ -15,7 +15,7 @@ const ProductDetail = ({ product }: ProductProps) => {
 // get params from api
 export const getStaticPaths: GetStaticPaths = async () => {
   const data = await (await fetch(`http://localhost:3001/products`)).json();
-  const paths = data.map(item => {
+  const paths = data.map((item: { id: string }) => {
     return { params: { id: String(item.id) } }
   })
 
